@@ -1,7 +1,9 @@
 class MemoryGame {
   constructor(cards) {
     this.cards = cards;
-    // add the rest of the class properties here
+    this.pickedCards = []
+    this.pairsClicked = []
+    this.pairsGuessed = []
   }
 
   shuffleCards() {
@@ -9,10 +11,18 @@ class MemoryGame {
   }
 
   checkIfPair(card1, card2) {
-    // ... write your code here
+    if (card1 === card2) {
+      this.pairsGuessed.push(card1)
+      return true
+
+  } else {this.pairsClicked.push(card1)}
+  return false
   }
+  
 
   checkIfFinished() {
-    // ... write your code here
+    if (pairsGuessed.length >= cards.length) {
+      return end
+    }
   }
 }
